@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--  <link href="./Pandey/DCN/resources/css/index.css" type="text/css" rel="stylesheet">-->
+  <title>MS-SA-TCN</title>
+</head>
+<body>
+<h1>Speech Enhancement Using a Self-Attentive Multi-Stage Temporal Convolutional Network</h1>
+<h2>Ju Lin, Adriaan J. van Wijngaarden, Kuang-Ching Wang and Melissa C. Smith</h2>
+<table style>
+  <tr>
+  <th colspan="7">Babble noise, SNR = -5 dB</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Noisy </th>
+    <th>CRN</th>
+    <th>Complex-CNN</th>
+    <th>DARCN</th>
+    <th>5stage-SA-TCN</th>
+    <th>Clean</th>
+
+  </tr>
+  <tr>
+    <td>sample1</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s1_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s1_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s1_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s1_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s1_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s1_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+      <tr>
+    <td>sample2</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s2_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s2_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s2_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s2_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s2_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s2_babble_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+
+</table>
+<br><br><br>
+<table style>
+  <tr>
+  <th colspan="7">Babble noise, SNR = 0 dB</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Noisy </th>
+    <th>CRN</th>
+    <th>Complex-CNN</th>
+    <th>DARCN</th>
+    <th>5stage-SA-TCN</th>
+    <th>Clean</th>
+
+  </tr>
+    <tr>
+    <td>sample1</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s1_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s1_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s1_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s1_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s1_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s1_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+      </tr>
+    <tr>
+    <td>sample2</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s2_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s2_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s2_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s2_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s2_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s2_babble_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+</table>
+<br><br><br>
+<table style>
+  <tr>
+  <th colspan="7">Babble noise, SNR = 5 dB</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Noisy </th>
+    <th>CRN</th>
+    <th>Complex-CNN</th>
+    <th>DARCN</th>
+    <th>5stage-SA-TCN</th>
+    <th>Clean</th>
+
+  </tr>
+    <tr>
+    <td>sample1</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s1_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s1_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s1_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s1_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s1_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s1_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+      </tr>
+    <tr>
+    <td>sample2</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s2_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s2_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s2_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s2_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s2_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s2_babble_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+</table>
+<br><br><br>
+<table style>
+  <tr>
+  <th colspan="7">Kitchen noise, SNR = -5 dB</th>
+  </tr>
+  <tr>
+      <th>Id</th>
+    <th>Noisy </th>
+    <th>CRN</th>
+    <th>Complex-CNN</th>
+    <th>DARCN</th>
+    <th>5stage-SA-TCN</th>
+    <th>Clean</th>
+      </tr>
+    <tr>
+    <td>sample1</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s1_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s1_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s1_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s1_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s1_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s1_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+        <tr>
+    <td>sample2</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s2_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s2_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s2_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s2_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s2_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s2_DKITCHEN_ch01_-5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+</table>
+<br><br><br>
+<table style>
+  <tr>
+  <th colspan="7">Kitchen noise, SNR = 0 dB</th>
+  </tr>
+  <tr>
+     <th>Id</th>
+    <th>Noisy </th>
+    <th>CRN</th>
+    <th>Complex-CNN</th>
+    <th>DARCN</th>
+    <th>5stage-SA-TCN</th>
+    <th>Clean</th>
+      </tr>
+    <tr>
+    <td>sample1</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s1_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s1_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s1_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s1_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s1_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s1_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+        <tr>
+    <td>sample2</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s2_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s2_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s2_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s2_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s2_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s2_DKITCHEN_ch01_0.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+</table>
+<br><br><br>
+<table style>
+  <tr>
+  <th colspan="7">Kitchen noise, SNR = 5 dB</th>
+  </tr>
+  <tr>
+       <th>Id</th>
+    <th>Noisy </th>
+    <th>CRN</th>
+    <th>Complex-CNN</th>
+    <th>DARCN</th>
+    <th>5stage-SA-TCN</th>
+    <th>Clean</th>
+      </tr>
+    <tr>
+    <td>sample1</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s1_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s1_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s1_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s1_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s1_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s1_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+       <td>sample2</td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/noisy_s2_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/crn_s2_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./ms-sa-tcn_demo/ccnn_s2_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/darcn_s2_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/satcn_s2_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td style="vertical-align:top"><audio controls>
+        <source src="./ms-sa-tcn_demo/clean_s2_DKITCHEN_ch01_5.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+</table>
+<br><br><br>
+</body>
+</html>
